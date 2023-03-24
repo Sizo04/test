@@ -1,0 +1,214 @@
+:root{
+  --secondarycolor: rgba(103,231,255,255);
+  --transformers:'Transformers', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: var(--transformers);
+ 
+  background-image: url(/Sliki/testbgjpg.jpg);
+}
+
+nav{
+  
+  height: 60px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.815);
+  
+  }
+
+
+  nav a{
+    text-decoration: none;
+    color: white;
+    line-height: 60%;
+    
+  }
+  
+  .logo {
+      
+      line-height: 60px;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 0 200px;
+      font-family: var(--transformers);
+      
+  }
+  .logo a{
+  color: white;
+  
+  }
+  
+  .logo a:hover{
+      color: var(--secondarycolor);
+      }
+  
+  nav ul{
+      float: right;
+      padding: 0 200px;
+      
+  }
+  
+  nav ul li{
+      display: inline-block;
+      line-height: 50px;
+      margin: 0 20px;
+  }
+
+  .hamburgermenu{
+    display: none;
+  }
+
+  #hero{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.815);
+    font-family: var(--transformers);
+    
+  }
+
+  .container{
+    color: white;
+    height: 100vh;
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .text{
+    margin: auto;
+  }
+
+  .container .text h1{
+    font-size: 3rem;
+    
+  }
+  .container .text h2{
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .container .text p{
+    font-size: 1rem;
+    max-width: 25%;
+    margin-bottom: 3rem;
+  }
+
+  .container p{
+    padding-left: 19cm;
+  }
+
+  .container .text a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--secondarycolor);
+    padding: 1rem;
+    border-radius: 0.5cm;
+ 
+    
+  }
+
+  .content .text img{
+    height: 20px;
+  }
+
+  .container .text a:hover{
+   
+    color: var(--secondarycolor);
+    background-color: rgba(255, 255, 255);
+  }
+
+  /* Animacija vo glavniot tekst */
+.rotation{
+  animation: rotation 3s infinite linear;
+}
+
+button{
+  background-color: rgba(240, 248, 255, 0);
+  border: 0;
+}
+
+
+
+  
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+/* mal ekran */
+@media only screen and (max-width: 1240px) {
+  nav ul a{
+    display: none;
+    
+  }
+
+  nav ul  {
+margin: 0;
+padding: 2em;
+  }
+
+  .hamburgermenu{
+    display: block;
+    float: right;
+  }
+ 
+}
+
+
+/* tablet / laptop */
+@media only screen and (max-width: 960px){
+  .container{
+    margin: 1.5em;
+  
+  text-align: center;
+  padding: 1em;
+  }
+  .container .text p{
+    max-width: 100%;
+  }
+  
+}
+
+
+/* telefon */
+@media only screen and (max-width: 600px){
+.logo{
+  padding: 0;
+  padding-left: 1em;
+  text-align: center;
+  align-self: center;
+  
+}
+
+nav ul{
+  padding: 0.8em 1em;
+}
+
+.container{
+  margin: 0.5em;
+  
+  text-align: center;
+  padding: 1em;
+
+} 
+
+.container .text p{
+  max-width: 100%;
+  padding: 0;
+}
+}
